@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import AppLogo from './icons/AppLogo';
 
 interface LoginScreenProps {
   onLogin: (accessCode: string) => void;
@@ -17,9 +16,8 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ onLogin, error }) => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 p-4">
       <div className="w-full max-w-md mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 text-center">
-        <AppLogo className="w-64 mx-auto mb-8" />
         
-        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">Bienvenue !</h2>
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2 mt-8">Bienvenue !</h2>
         <p className="text-gray-600 dark:text-gray-300 mb-8">Veuillez entrer votre code d'accès pour commencer.</p>
 
         <form onSubmit={handleSubmit} className="space-y-6">

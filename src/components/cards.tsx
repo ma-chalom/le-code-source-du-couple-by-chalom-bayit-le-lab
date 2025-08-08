@@ -1,6 +1,5 @@
 import React from 'react';
 import { CardData, Theme } from '../types';
-import AppLogo from './icons/AppLogo';
 import CardBackIcon from './icons/CardBackIcon';
 
 interface CardProps {
@@ -33,7 +32,6 @@ const Card: React.FC<CardProps> = ({ card, isFlipped }) => {
             {card ? (
                 <>
                     <div className="p-6 flex-grow flex flex-col justify-center items-center text-center">
-                        <AppLogo className="h-16 mb-8"/>
                         <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-800 dark:text-gray-100">
                             {card.question}
                         </p>

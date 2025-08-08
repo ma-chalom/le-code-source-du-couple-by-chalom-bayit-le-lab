@@ -5,7 +5,6 @@ import Card from './Card';
 import GearIcon from './icons/GearIcon';
 import QuestionMarkIcon from './icons/QuestionMarkIcon';
 import RulesModal from './RulesModal';
-import AppLogo from './icons/AppLogo';
 import CardBackIcon from './icons/CardBackIcon';
 
 const shuffleArray = <T,>(array: T[]): T[] => {
@@ -199,13 +198,10 @@ const GameScreen: React.FC<GameScreenProps> = ({ players, scores, seenCardIds, o
             }}
             onResetSeenCards={onResetSeenCards}
        />
-      <header className="w-full grid grid-cols-3 items-center mb-6 gap-4">
+      <header className="w-full flex justify-between items-center mb-6 gap-4">
         <div className="text-left">
             <p className="font-bold text-cyan-500">{players.player1}</p>
             <p className="text-lg font-bold">{localScores.player1} PTS</p>
-        </div>
-        <div className="text-center">
-          <AppLogo className="h-12 sm:h-16 mx-auto" />
         </div>
         <div className="text-right">
             <p className="font-bold text-fuchsia-500">{players.player2}</p>

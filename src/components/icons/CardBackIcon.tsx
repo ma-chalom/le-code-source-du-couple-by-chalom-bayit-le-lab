@@ -6,17 +6,9 @@ const CardBackIcon: React.FC<{ className?: string }> = ({ className }) => (
         <rect width="100%" height="100%" fill="#1f2937" />
 
         <g textAnchor="middle" fontFamily="sans-serif" fill="#d59e0d">
-            {/* Main Title */}
-            <text x="150" y="140" fontSize="32" fontWeight="bold">LE</text>
-            <text x="150" y="190" fontSize="32" fontWeight="bold">CODE SOURCE</text>
-            <text x="150" y="240" fontSize="32" fontWeight="bold">DU COUPLE</text>
-        </g>
-        
-        <g textAnchor="middle" fontFamily="sans-serif" fill="#a855f7">
-            {/* Subtitle */}
-            <text x="150" y="310" fontSize="16" fontWeight="bold">
-                <tspan fill="#ec4899">by</tspan> le Chalom Bayit <tspan fill="#06b6d4">LAB</tspan>
-            </text>
+            {/* Main Title, simplified and centered */}
+            <text x="150" y="195" fontSize="34" fontWeight="bold">Le Code Source</text>
+            <text x="150" y="240" fontSize="34" fontWeight="bold">du Couple</text>
         </g>
     </svg>
 );
