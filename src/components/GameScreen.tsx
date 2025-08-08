@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { CardData, PlayerData, PlayerScores } from '../types';
 import { CARDS } from '../constants';
-import Card, { GameLogo } from './Card';
+import Card from './Card';
 import GearIcon from './icons/GearIcon';
 import QuestionMarkIcon from './icons/QuestionMarkIcon';
 import RulesModal from './RulesModal';
+import AppLogo from './icons/AppLogo';
+import CardBackIcon from './icons/CardBackIcon';
 
 const shuffleArray = <T,>(array: T[]): T[] => {
   const newArray = [...array];
@@ -203,7 +205,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ players, scores, seenCardIds, o
             <p className="text-lg font-bold">{localScores.player1} PTS</p>
         </div>
         <div className="text-center">
-          <img src="/logo.png" alt="Logo" className="h-12 sm:h-16 mx-auto"/>
+          <AppLogo className="h-12 sm:h-16 mx-auto" />
         </div>
         <div className="text-right">
             <p className="font-bold text-fuchsia-500">{players.player2}</p>
@@ -222,11 +224,11 @@ const GameScreen: React.FC<GameScreenProps> = ({ players, scores, seenCardIds, o
                         <p className="text-gray-600 dark:text-gray-300">Vous avez terminé les cartes de cette session. Félicitations !</p>
                     </div>
                 ) : (
-                    <div className="w-full max-w-sm h-full perspective">
-                        <div className="relative w-full h-full rounded-2xl shadow-2xl bg-gray-800 flex items-center justify-center p-6 border-4 border-yellow-500">
-                            <GameLogo />
-                        </div>
-                    </div>
+                   <div className="w-full max-w-sm h-full perspective">
+                     <div className="relative w-full h-full rounded-2xl shadow-2xl bg-gray-800 overflow-hidden border-4 border-yellow-500">
+                       <CardBackIcon />
+                     </div>
+                   </div>
                 )}
             </div>
             
